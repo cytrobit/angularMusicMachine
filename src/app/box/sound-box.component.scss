@@ -1,0 +1,122 @@
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  // align-items: center;
+  flex: 1;
+  height: 100%;
+  // max-height: 400px;
+  // width: auto;
+  /* width: 12vw;
+    height: 12vw; */
+  background: rgba(255, 0, 119, 0.082);
+  border-radius: 25%;
+  box-shadow: inset 9.91px 9.91px 15px #4d5aa6,
+    inset -9.91px -9.91px 15px #5f70cc;
+  border-radius: 10px;
+  transition: 0.2s;
+  user-select: none;
+}
+
+.box:nth-child(odd) {
+  background-color: rgba(69, 69, 250, 0.192);
+}
+
+.box:hover {
+  background: linear-gradient(145deg, #6b7ee7, #414c8b);
+  box-shadow: inset 15.02px 15.02px 19px #465296,
+    inset -15.02px -15.02px 19px #6678dc;
+}
+
+.box.active {
+  background: linear-gradient(145deg, #6b7ee7, #414c8b);
+  box-shadow: inset 15.02px 15.02px 19px #465296,
+    inset -15.02px -15.02px 19px #6678dc;
+}
+
+.box img {
+  display: block;
+  margin: 0 auto;
+  height: 100%;
+  width: 65%;
+  padding: 20px;
+  transform: scale(1);
+  transition: 0.2s;
+  pointer-events: none;
+}
+
+.box img.active {
+  filter: invert(37%) sepia(51%) saturate(2878%) hue-rotate(346deg)
+    brightness(104%) contrast(97%);
+  transform: scale(0.97);
+}
+
+.boxTitle {
+  font-size: 1.1em;
+  color: rgb(210, 231, 250);
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0 auto 10px auto;
+  pointer-events: none;
+}
+
+@media (max-width: 1366px) {
+  .box img {
+    height: 100%;
+    width: 70%;
+  }
+}
+
+@media (max-width: 1280px) {
+  .box img {
+    width: 80%;
+  }
+
+  .boxTitle {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 1024px) {
+  .box {
+    width: 30vw;
+    height: 33vw;
+  }
+
+  .boxTitle {
+    font-size: 1.8em;
+  }
+}
+
+@media (max-width: 768px) {
+  .box img {
+    height: 100%;
+    width: 90%;
+  }
+  .boxTitle {
+    font-size: 1.4em;
+  }
+}
+
+@media (max-width: 450px) {
+  .box {
+    width: 30vw;
+    height: 40vw;
+  }
+
+  .box img {
+    height: 100%;
+    width: 90%;
+  }
+
+  .boxTitle {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 360px) {
+  .box img {
+    height: 100%;
+    width: 100%;
+  }
+}

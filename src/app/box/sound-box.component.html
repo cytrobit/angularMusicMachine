@@ -1,0 +1,13 @@
+<div class="box" (click)="toggle()" [ngClass]="{active: isPlaying}">
+  <div>
+    <img
+      [ngClass]="{
+        active: isPlaying
+      }"
+      [src]="getImage()"
+    />
+  </div>
+  <span class="boxTitle">
+  {{ getLabel() }}
+</span>
+</div>

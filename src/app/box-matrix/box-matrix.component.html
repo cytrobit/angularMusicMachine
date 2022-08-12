@@ -1,0 +1,5 @@
+<div class="box-matrix">
+  <div *ngFor="let m of getAllBoxes(); let i = index" [attr.data-index]="i">
+    <app-sound-box [sound]="m"></app-sound-box>
+  </div>
+</div>
